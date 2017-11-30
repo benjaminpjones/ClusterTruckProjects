@@ -36,7 +36,6 @@ def request_info(url, curr_rh,q):
         curr_rh.response = urllib2.urlopen(url)
     except urllib2.HTTPError as err:
         curr_rh.error = err
-        print err
     curr_rh.complete = True
     print_complete(q)
     return
